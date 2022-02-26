@@ -36,7 +36,7 @@ public class GreatestCommonDivisor {
         int small = a<b ? a:b;
         return getGreatestCommonDivisorV3(big - small, small);
     }
-    //辗转相除法和更相减损术的结合
+    //更相减损术与移位相的结合
     public static int gcd(int a, int b){
         if(a == b){
             return a;
