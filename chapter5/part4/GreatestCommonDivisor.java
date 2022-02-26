@@ -1,10 +1,10 @@
 package chapter5.part4;
 
 /**
- * Created by weimengshu on 2018/10/6.
+ * 申晓创建于2022年2月26日.
  */
 public class GreatestCommonDivisor {
-
+    //暴力求解法
     public static int getGreatestCommonDivisor(int a, int b){
         int big = a>b ? a:b;
         int small = a<b ? a:b;
@@ -18,7 +18,7 @@ public class GreatestCommonDivisor {
         }
         return  1;
     }
-
+    //辗转相除法
     public static int getGreatestCommonDivisorV2(int a, int b){
         int big = a>b ? a:b;
         int small = a<b ? a:b;
@@ -27,7 +27,7 @@ public class GreatestCommonDivisor {
         }
         return getGreatestCommonDivisorV2(big%small, small);
     }
-
+    //更相减损术
     public static int getGreatestCommonDivisorV3(int a, int b){
         if(a == b){
             return a;
@@ -36,7 +36,7 @@ public class GreatestCommonDivisor {
         int small = a<b ? a:b;
         return getGreatestCommonDivisorV3(big - small, small);
     }
-
+    //辗转相除法和更相减损术的结合
     public static int gcd(int a, int b){
         if(a == b){
             return a;
