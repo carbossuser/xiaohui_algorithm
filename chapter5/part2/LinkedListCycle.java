@@ -1,7 +1,7 @@
 package chapter5.part2;
 
 /**
- * Created by weimengshu on 2018/8/24.
+ * 申晓写于2022年2月26日.
  */
 public class LinkedListCycle {
 
