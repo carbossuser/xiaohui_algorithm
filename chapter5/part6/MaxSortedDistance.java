@@ -38,6 +38,7 @@ public class MaxSortedDistance {
         }
 
         //3.遍历原始数组，确定每个桶的最大最小值
+        //这一段难理解，需要仔细思考推断。问题已解决，在书上写过程。 
         for(int i = 0; i < array.length; i++){
             //确定数组元素所归属的桶下标
             int index = ((array[i] - min)  * (bucketNum-1) / d);
