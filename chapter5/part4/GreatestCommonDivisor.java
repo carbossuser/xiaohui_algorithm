@@ -2,6 +2,7 @@ package chapter5.part4;
 
 /**
  * 申晓创建于2022年2月26日.
+ * 求最大公约数.
  */
 public class GreatestCommonDivisor {
     //暴力求解法
