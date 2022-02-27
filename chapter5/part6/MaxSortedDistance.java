@@ -1,7 +1,9 @@
 package chapter5.part6;
 
 /**
- * Created by weimengshu on 2018/7/13.
+ * 申晓创建于2022年2月27日.
+ * 题目：有一个无序整型数组，如何求出该数组排序后的任意两个相邻元素的最大差值？
+ * 要求时间和空间复杂度尽可能低.
  */
 
 public class MaxSortedDistance {
