@@ -13,14 +13,17 @@ public class BigNumberSum {
     public static String bigNumberSum(String bigNumberA, String bigNumberB) {
         //1.把两个大整数用数组逆序存储，数组长度等于较大整数位数+1
         int maxLength = bigNumberA.length() > bigNumberB.length() ? bigNumberA.length() : bigNumberB.length();
-        int[] arrayA = new int[maxLength+1];
+        //A ? B : C .如果A条件满足就执行B,否则执行C
+        int[] arrayA = new int[maxLength+1];  //定义出A数组的长度
         for(int i=0; i< bigNumberA.length(); i++){
-            arrayA[i] = bigNumberA.charAt(bigNumberA.length()-1-i) - '0';
+            arrayA[i] = bigNumberA.charAt(bigNumberA.length()-1-i) - '0';  //charAt() 方法用于返回指定索引处的字符。索引范围为从 0 到 length() - 1。
         }
-        int[] arrayB = new int[maxLength+1];
+        int[] arrayB = new int[maxLength+1];  //定义出B数组的长度
         for(int i=0; i< bigNumberB.length(); i++){
-            arrayB[i] = bigNumberB.charAt(bigNumberB.length()-1-i) - '0';
+            arrayB[i] = bigNumberB.charAt(bigNumberB.length()-1-i) - '0'; 
         }
+        //如何理解-'0'，http://cn.voidcc.com/question/p-fnnbzlgk-zn.html
+        //string.charAt(i)返回一个字符，string.charAt(i)-'0'将返回实际的整数值
         //2.构建result数组，数组长度等于较大整数位数+1
         int[] result = new int[maxLength+1];
         //3.遍历数组，按位相加
