@@ -1,7 +1,5 @@
-package chapter5.part10;
-
 /**
- * Created by weimengshu on 2018/10/20.
+ *申晓创建于2022年3月5日.
  */
 public class BigNumberSum {
 
@@ -20,7 +18,7 @@ public class BigNumberSum {
         }
         int[] arrayB = new int[maxLength+1];  //定义出B数组的长度
         for(int i=0; i< bigNumberB.length(); i++){
-            arrayB[i] = bigNumberB.charAt(bigNumberB.length()-1-i) - '0'; 
+            arrayB[i] = bigNumberB.charAt(bigNumberB.length()-1-i) - '0';
         }
         //如何理解-'0'，http://cn.voidcc.com/question/p-fnnbzlgk-zn.html
         //string.charAt(i)返回一个字符，string.charAt(i)-'0'将返回实际的整数值
@@ -40,18 +38,22 @@ public class BigNumberSum {
         }
         //4.把result数组再次逆序并转成String
         StringBuilder sb = new StringBuilder();
+        //StringBuilder类也代表可变字符串对象。实际上，StringBuilder和StringBuffer基本相似，
+        // 两个类的构造器和方法也基本相同。不同的是：StringBuffer是线程安全的，而StringBuilder则没有实现线程安全功能，所以性能略高。
+        // https://blog.csdn.net/csxypr/article/details/92378336
         //是否找到大整数的最高有效位
         boolean findFirst = false;
         for (int i = result.length - 1; i >= 0; i--) {
             if(!findFirst){
                 if(result[i] == 0){
-                    continue;
+                    continue;//返回到起点，进行下一个循环
                 }
                 findFirst = true;
             }
-            sb.append(result[i]);
+            sb.append(result[i]); //append()是往动态字符串数组添加
         }
         return sb.toString();
+        //toString() 方法可把一个 Number 对象转换为一个字符串，并返回结果。
     }
 
     public static void main(String[] args) {
